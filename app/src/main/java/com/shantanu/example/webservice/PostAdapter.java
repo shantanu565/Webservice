@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +36,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         final Posts posts = dataSet.get(position);
         holder.textView1.setText(posts.getName());
         holder.textView2.setText(posts.getMessage());
+        String url=posts.getProfileImage();
+        Glide.with(context).load(url).into(holder.imageView);
         //holder.imageView.setImageResource(dataSet.get(position).getProfileImage());
 
     }

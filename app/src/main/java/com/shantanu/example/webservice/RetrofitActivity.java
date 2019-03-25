@@ -49,7 +49,7 @@ public class RetrofitActivity extends AppCompatActivity {
                     recyclerView.setHasFixedSize(true);
                     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
                     recyclerView.setLayoutManager(layoutManager);
-                    adapter=new RetroAdapter(data);
+                    adapter=new RetroAdapter(data,RetrofitActivity.this);
                     recyclerView.setAdapter(adapter);
 
                 }
