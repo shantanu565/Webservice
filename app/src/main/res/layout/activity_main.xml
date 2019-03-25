@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rel_lay"
+    tools:context=".MainActivity">
+
+   <Button
+       android:id="@+id/btn_fetch"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Fetch background"
+       android:textSize="18sp"
+       android:layout_centerInParent="true"/>
+   <Button
+       android:id="@+id/btn_questwo"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Ques Retrofit"
+       android:textSize="18sp"
+       android:layout_below="@id/btn_fetch"
+       android:layout_marginTop="15dp"
+       android:layout_centerHorizontal="true"/>
+   <Button
+       android:id="@+id/btn_three"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Ques HttpUrlconnection"
+       android:textSize="18sp"
+       android:layout_below="@id/btn_questwo"
+       android:layout_marginTop="15dp"
+       android:layout_centerHorizontal="true"
+       android:onClick="thirdfunc"/>
+
+</RelativeLayout>
