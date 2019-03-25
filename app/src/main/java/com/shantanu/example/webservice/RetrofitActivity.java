@@ -67,66 +67,6 @@ public class RetrofitActivity extends AppCompatActivity {
 
 
     }
-    /*
 
-    public void getPosts(){
-        Retrofit retrofit= new Retrofit.Builder()
-        .baseUrl(RequestInterface.Base)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        RequestInterface requestInterface=retrofit.create(RequestInterface.class);
-        Call<List<Posts>> call=requestInterface.getPosts();
-        call.enqueue(new Callback<List<Posts>>() {
-            @Override
-            public void onResponse(Call<List<Posts>> call, Response<List<Posts>> response) {
-                List<Posts> post2=response.body();
-                for (int i=0;i<post2.size();i++){
-                    String p=post2.get(i).getName();
-                    Toast.makeText(RetrofitActivity.this,p,Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<Posts>> call, Throwable t) {
-
-                Toast.makeText(RetrofitActivity.this,t.getMessage(),Toast.LENGTH_SHORT).show();
-
-            }
-        });
-    }
-
-    private void initViews(){
-        recyclerView = (RecyclerView)findViewById(R.id.rv1);
-        recyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(layoutManager);
-        //loadJSON();
-    }
-    /*
-    private void loadJSON(){
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://storage.googleapis.com/network-security-conf-codelab.appspot.com/v2/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        RequestInterface request = retrofit.create(RequestInterface.class);
-       // Call<JSONResponse> call = request.getJSON();
-        call.enqueue(new Callback<JSONResponse>() {
-            @Override
-            public void onResponse(Call<JSONResponse> call, Response<JSONResponse> response) {
-
-                JSONResponse jsonResponse = response.body();
-                data = new ArrayList<>(Arrays.asList(jsonResponse.getAndroid()));
-                adapter = new RetroAdapter(data);
-                recyclerView.setAdapter(adapter);
-            }
-
-            @Override
-            public void onFailure(Call<JSONResponse> call, Throwable t) {
-                Log.d("Error",t.getMessage());
-            }
-        });
-    }
-    */
 }
 

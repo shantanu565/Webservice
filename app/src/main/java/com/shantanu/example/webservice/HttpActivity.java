@@ -53,30 +53,7 @@ public class HttpActivity extends AppCompatActivity {
          new FetchEmployeeDetails().execute(url);
     }
 
-    public  void firstfunc(){
 
-    }
-    /*
-    private List<Posts> getPostData() throws JSONException {
-        try{
-         String json=new HttpHelper().execute(url).get();
-         JSONObject jb1=new JSONObject(json);
-            JSONArray ja1=jb1.getJSONArray("posts");
-            int length=((JSONArray) ja1).length();
-            List<Posts> mypost=new ArrayList<>();
-            Posts posts;
-            for (int h=0;h<length;h++){
-                JSONObject mo=((JSONArray) ja1).getJSONObject(h);
-                posts=new Posts();
-                posts.setName(mo.getString("name"));
-                posts.setMessage(mo.getString("message"));
-                posts.setProfileImage(mo.optString("profileImage"));
-                mypost.add(posts);
-            }
-            return mypost;
-        }
-    }
-    */
 
     private class FetchEmployeeDetails extends AsyncTask<String, String, String> {
         JSONObject response;
@@ -153,10 +130,7 @@ public class HttpActivity extends AppCompatActivity {
                         pList.add(employeeDetails);
                     }
                     adapter=new PostAdapter(pList,getApplicationContext());
-
-                    //Create an adapter with the EmployeeDetails List and set it to the LstView
                     adapter.notifyDataSetChanged();
-                    //adapter = new PostAdapter((ArrayList<Posts>) pList,getApplicationContext());
                     recyclerView.setAdapter(adapter);
 
                 } catch (JSONException e) {
